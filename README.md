@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ois Hills | Tienda Oficial</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+    header {
+      text-align: center;
+      padding: 40px;
+    }
+    header img {
+      max-width: 200px;
+    }
+    nav {
+      background-color: #111;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .banner img {
+      width: 100%;
+      max-height: 500px;
+      object-fit: cover;
+    }
+    .productos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px;
+    }
+    .producto {
+      background-color: #111;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
+    .producto img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .producto h3 {
+      margin: 10px 0 5px;
+    }
+    .producto p {
+      margin: 0 0 10px;
+    }
+    .producto button {
+      background-color: red;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #777;
+      background-color: #111;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="ois_logo.jpg" alt="Logo Ois Hills">
+    <h1>Tienda Oficial</h1>
+  </header>
+
+  <nav>
+    <a href="#productos">Catálogo</a>
+    <a href="https://www.instagram.com/ois_hills/" target="_blank">Instagram</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <section class="banner">
+    <img src="ois.jpg" alt="Modelo Ois Hills">
+  </section>
+
+  <section class="productos" id="productos">
+    <div class="producto">
+      <img src="https://via.placeholder.com/300x400?text=Camiseta+1" alt="Camiseta 1">
+      <h3>Camiseta Negra Ois</h3>
+      <p>$79.900 COP</p>
+      <button>Comprar</button>
+    </div>
+    <div class="producto">
+      <img src="https://via.placeholder.com/300x400?text=Camiseta+2" alt="Camiseta 2">
+      <h3>Camiseta Verde Ois</h3>
+      <p>$79.900 COP</p>
+      <button>Comprar</button>
+    </div>
+    <!-- Más productos aquí -->
+  </section>
+
+  <footer id="contacto">
+    <p>Contáctanos: <a href="mailto:contacto@oishills.com">contacto@oishills.com</a></p>
+    <p>&copy; 2025 Ois Hills</p>
+  </footer>
+</body>
+</html>
