@@ -1,75 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ois Hills</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #fff;
+    }
+    header h1 {
+      font-size: 3rem;
+      font-style: italic;
+    }
+    header p {
+      color: #666;
+      font-size: 1.2rem;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      padding: 1rem;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 12px;
+    }
+    .gallery p {
+      text-align: center;
+      font-style: italic;
+      margin-top: 0.5rem;
+    }
+    .price-section {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #fff;
+      border-top: 1px solid #ddd;
+    }
+    .social-icons a {
+      margin: 0 0.5rem;
+      text-decoration: none;
+      font-size: 1.2rem;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Ois Hills</h1>
+    <p>Change your style, change your life</p>
+  </header>
 
-import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Instagram, Mail, Tiktok } from "lucide-react";
-
-export default function Home() {
-  return (
-    <div className="p-4 grid gap-6">
-      <header className="text-center">
-        <h1 className="text-5xl font-bold italic" style={{ fontFamily: 'OisFont, cursive' }}>Ois Hills</h1>
-        <p className="text-lg text-muted-foreground">Change your style, change your life</p>
-      </header>
-
-      <section className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <Card>
-          <CardContent className="p-4">
-            <img src="/ois 3.jpg" alt="camiseta blanca" className="rounded-xl mb-2" />
-            <p className="text-center italic">Taste of Love</p>
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardContent className="p-4">
-            <img src="/ois 4.jpg" alt="camiseta negra" className="rounded-xl mb-2" />
-            <p className="text-center italic">Do what you love</p>
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardContent className="p-4">
-            <img src="/ois 5.jpg" alt="camiseta negra logo ois" className="rounded-xl mb-2" />
-            <p className="text-center italic">Camiseta clásica Ois</p>
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardContent className="p-4">
-            <img src="/ois 6.jpg" alt="camiseta verde Ois Hills" className="rounded-xl mb-2" />
-            <p className="text-center italic">Estilo deportivo verde</p>
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardContent className="p-4">
-            <img src="/ois 8.jpg" alt="camiseta negra Ois Hills" className="rounded-xl mb-2" />
-            <p className="text-center italic">Estilo deportivo negro</p>
-          </CardContent>
-        </Card>
-      </section>
-
-      <section className="text-center mt-10">
-        <h2 className="text-2xl font-semibold mb-4">Casetas disponibles</h2>
-        <p className="text-lg">Precio: $100.000 COP</p>
-      </section>
-
-      <footer className="text-center mt-10 border-t pt-4 space-y-2">
-        <div className="flex justify-center gap-4">
-          <a href="https://www.instagram.com/ois_hills" target="_blank" rel="noopener noreferrer">
-            <Instagram className="w-5 h-5" />
-          </a>
-          <a href="https://www.tiktok.com/@oishills" target="_blank" rel="noopener noreferrer">
-            <Tiktok className="w-5 h-5" />
-          </a>
-          <a href="mailto:Oishills17@gmail.com">
-            <Mail className="w-5 h-5" />
-          </a>
-        </div>
-        <p className="text-sm text-muted-foreground">© 2025 Ois Hills</p>
-      </footer>
+  <section class="gallery">
+    <div>
+      <img src="ois 3.jpg" alt="Taste of Love">
+      <p>Taste of Love</p>
     </div>
-  );
-}
+    <div>
+      <img src="ois 4.jpg" alt="Do what you love">
+      <p>Do what you love</p>
+    </div>
+    <div>
+      <img src="ois 5.jpg" alt="Camiseta clásica Ois">
+      <p>Camiseta clásica Ois</p>
+    </div>
+    <div>
+      <img src="ois 6.jpg" alt="Estilo deportivo verde">
+      <p>Estilo deportivo verde</p>
+    </div>
+    <div>
+      <img src="ois 8.jpg" alt="Estilo deportivo negro">
+      <p>Estilo deportivo negro</p>
+    </div>
+  </section>
+
+  <section class="price-section">
+    <h2>Casetas disponibles</h2>
+    <p>Precio: $100.000 COP</p>
+  </section>
+
+  <footer>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/ois_hills" target="_blank">Instagram</a>
+      <a href="https://www.tiktok.com/@oishills" target="_blank">TikTok</a>
+      <a href="mailto:Oishills17@gmail.com">Correo</a>
+    </div>
+    <p>&copy; 2025 Ois Hills</p>
+  </footer>
+</body>
+</html>
+
 
 
