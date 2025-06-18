@@ -1,113 +1,75 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ois Hills | Tienda Oficial</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #000;
-      color: #fff;
-    }
-    header {
-      text-align: center;
-      padding: 40px;
-    }
-    header img {
-      max-width: 200px;
-    }
-    nav {
-      background-color: #111;
-      padding: 10px;
-      text-align: center;
-    }
-    nav a {
-      color: #fff;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .banner img {
-      width: 100%;
-      max-height: 500px;
-      object-fit: cover;
-    }
-    .productos {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      padding: 40px;
-    }
-    .producto {
-      background-color: #111;
-      padding: 20px;
-      border-radius: 10px;
-      text-align: center;
-    }
-    .producto img {
-      width: 100%;
-      border-radius: 10px;
-    }
-    .producto h3 {
-      margin: 10px 0 5px;
-    }
-    .producto p {
-      margin: 0 0 10px;
-    }
-    .producto button {
-      background-color: red;
-      border: none;
-      color: white;
-      padding: 10px 20px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-    footer {
-      text-align: center;
-      padding: 30px;
-      color: #777;
-      background-color: #111;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <img src="ois_logo.jpg" alt="Logo Ois Hills">
-    <h1>Tienda Oficial</h1>
-  </header>
 
-  <nav>
-    <a href="#productos">Catálogo</a>
-    <a href="https://www.instagram.com/ois_hills/" target="_blank">Instagram</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
+import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Instagram, Mail, Tiktok } from "lucide-react";
 
-  <section class="banner">
-    <img src="ois.jpg" alt="Modelo Ois Hills">
-  </section>
+export default function Home() {
+  return (
+    <div className="p-4 grid gap-6">
+      <header className="text-center">
+        <h1 className="text-5xl font-bold italic" style={{ fontFamily: 'OisFont, cursive' }}>Ois Hills</h1>
+        <p className="text-lg text-muted-foreground">Change your style, change your life</p>
+      </header>
 
-  <section class="productos" id="productos">
-    <div class="producto">
-      <img src="https://via.placeholder.com/300x400?text=Camiseta+1" alt="Camiseta 1">
-      <h3>Camiseta Negra Ois</h3>
-    <p>$100.000 COP</p>
+      <section className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <Card>
+          <CardContent className="p-4">
+            <img src="/ois 3.jpg" alt="camiseta blanca" className="rounded-xl mb-2" />
+            <p className="text-center italic">Taste of Love</p>
+          </CardContent>
+        </Card>
 
-      <button>Comprar</button>
+        <Card>
+          <CardContent className="p-4">
+            <img src="/ois 4.jpg" alt="camiseta negra" className="rounded-xl mb-2" />
+            <p className="text-center italic">Do what you love</p>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardContent className="p-4">
+            <img src="/ois 5.jpg" alt="camiseta negra logo ois" className="rounded-xl mb-2" />
+            <p className="text-center italic">Camiseta clásica Ois</p>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardContent className="p-4">
+            <img src="/ois 6.jpg" alt="camiseta verde Ois Hills" className="rounded-xl mb-2" />
+            <p className="text-center italic">Estilo deportivo verde</p>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardContent className="p-4">
+            <img src="/ois 8.jpg" alt="camiseta negra Ois Hills" className="rounded-xl mb-2" />
+            <p className="text-center italic">Estilo deportivo negro</p>
+          </CardContent>
+        </Card>
+      </section>
+
+      <section className="text-center mt-10">
+        <h2 className="text-2xl font-semibold mb-4">Casetas disponibles</h2>
+        <p className="text-lg">Precio: $100.000 COP</p>
+      </section>
+
+      <footer className="text-center mt-10 border-t pt-4 space-y-2">
+        <div className="flex justify-center gap-4">
+          <a href="https://www.instagram.com/ois_hills" target="_blank" rel="noopener noreferrer">
+            <Instagram className="w-5 h-5" />
+          </a>
+          <a href="https://www.tiktok.com/@oishills" target="_blank" rel="noopener noreferrer">
+            <Tiktok className="w-5 h-5" />
+          </a>
+          <a href="mailto:Oishills17@gmail.com">
+            <Mail className="w-5 h-5" />
+          </a>
+        </div>
+        <p className="text-sm text-muted-foreground">© 2025 Ois Hills</p>
+      </footer>
     </div>
-    <div class="producto">
-      <img src="https://via.placeholder.com/300x400?text=Camiseta+2" alt="Camiseta 2">
-      <h3>Camiseta Verde Ois</h3>
-      <p>$79.900 COP</p>
-      <button>Comprar</button>
-    </div>
-    <!-- Más productos aquí -->
-  </section>
+  );
+}
 
-  <footer id="contacto">
-    <p>Contáctanos: <a href="mailto:contacto@oishills.com">contacto@oishills.com</a></p>
-    <p>&copy; 2025 Ois Hills</p>
-  </footer>
-</body>
-</html>
+
