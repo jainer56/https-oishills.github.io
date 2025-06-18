@@ -92,7 +92,8 @@
     <div class="producto">
       <img src="https://via.placeholder.com/300x400?text=Camiseta+1" alt="Camiseta 1">
       <h3>Camiseta Negra Ois</h3>
-      <p>$79.900 COP</p>
+    <p>$100.000 COP</p>
+
       <button>Comprar</button>
     </div>
     <div class="producto">
